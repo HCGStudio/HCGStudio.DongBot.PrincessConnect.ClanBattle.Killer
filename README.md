@@ -42,6 +42,8 @@
 
 在群内发送鲨内鬼+at需要鲨的人，即可自动生成图片。
 
+![效果图](https://raw.githubusercontent.com/HCGStudio/HCGStudio.DongBot.PrincessConnect.ClanBattle.Killer/master/img/result.jpg)
+
 ## 图来源
 
 最早能在搜索引擎中发现的帖子来源于NGA[**[无聊水]以后会长踢人可以送一个证书**](https://ngabbs.com/read.php?tid=22406220)，但是其右下角水印显示其来自于百度贴吧，如果有人是原作者或者知道来源请发ISSUE，这样就可以正确署名。
