@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using ImageProcessor;
 using ImageProcessor.Imaging;
@@ -14,7 +11,8 @@ namespace HCGStudio.DongBot.PrincessConnect.ClanBattle.Killer
 {
     public static class GenerateKilledPicture
     {
-        public static async Task GenerateKilledPictureAsync(string year, string month, byte[] source, byte[] avatar, string battleName, string killedName,
+        public static async Task GenerateKilledPictureAsync(string year, string month, byte[] source, byte[] avatar,
+            string battleName, string killedName,
             string clanName, string killReason, Stream outPutStream)
         {
             using var font = new FontFamily("方正兰亭黑简体");
@@ -74,12 +72,12 @@ namespace HCGStudio.DongBot.PrincessConnect.ClanBattle.Killer
                 await using var ms = new MemoryStream();
                 using var avatarImg = new ImageFactory();
                 avatarImg.Load(avatar)
-                    .Resize(new Size(120,120))
+                    .Resize(new Size(120, 120))
                     .Format(new BitmapFormat())
                     .Save(ms);
                 ms.Seek(0, SeekOrigin.Begin);
                 var srcImage = new Bitmap(ms);
-                var dstImage = new Bitmap(srcImage.Width, srcImage.Height,PixelFormat.Format64bppArgb);
+                var dstImage = new Bitmap(srcImage.Width, srcImage.Height, PixelFormat.Format64bppArgb);
                 var g = Graphics.FromImage(dstImage);
                 using var br = new SolidBrush(Color.Transparent);
                 g.FillRectangle(br, 0, 0, dstImage.Width, dstImage.Height);
